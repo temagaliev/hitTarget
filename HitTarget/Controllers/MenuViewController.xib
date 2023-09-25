@@ -22,14 +22,14 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgMenu" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-V2-h3n">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="n9o-0t-MMw">
-                    <rect key="frame" x="112.66666666666669" y="476" width="150" height="60"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="n9o-0t-MMw">
+                    <rect key="frame" x="109.66666666666669" y="341" width="156" height="130"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-wB-UTA">
-                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="EC9-yb-uEk"/>
-                                <constraint firstAttribute="width" constant="60" id="zdZ-nz-z77"/>
+                                <constraint firstAttribute="width" constant="156" id="OWd-dX-HjI"/>
+                                <constraint firstAttribute="height" constant="50" id="lkI-Oh-8b0"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="play"/>
@@ -38,10 +38,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-Wv-Xgb">
-                            <rect key="frame" x="89.999999999999986" y="0.0" width="60.000000000000014" height="60"/>
+                            <rect key="frame" x="0.0" y="80" width="156" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="DqY-Kc-AgV"/>
-                                <constraint firstAttribute="height" constant="60" id="NhS-aC-puJ"/>
+                                <constraint firstAttribute="width" constant="156" id="DqY-Kc-AgV"/>
+                                <constraint firstAttribute="height" constant="50" id="NhS-aC-puJ"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="privacyPolicy"/>
@@ -55,7 +55,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="n9o-0t-MMw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="100" id="0pE-37-r2a"/>
+                <constraint firstItem="n9o-0t-MMw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0pE-37-r2a"/>
                 <constraint firstAttribute="bottom" secondItem="9Qg-V2-h3n" secondAttribute="bottom" id="9zd-mJ-Jk4"/>
                 <constraint firstItem="n9o-0t-MMw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fcy-D5-vwK"/>
                 <constraint firstItem="9Qg-V2-h3n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T8Z-ab-JV3"/>
@@ -69,8 +69,8 @@
     </objects>
     <resources>
         <image name="bgMenu" width="2484" height="4416"/>
-        <image name="play" width="434" height="472"/>
-        <image name="privacyPolicy" width="431" height="471"/>
+        <image name="play" width="1349" height="434"/>
+        <image name="privacyPolicy" width="1349" height="434"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

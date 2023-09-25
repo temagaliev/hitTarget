@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-CV-BH4">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winBg" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-CV-BH4">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-W8-Xy3">
@@ -71,10 +71,10 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="2484" height="4416"/>
-        <image name="menu" width="271" height="294"/>
-        <image name="replay" width="270" height="294"/>
-        <image name="win" width="1548" height="857"/>
+        <image name="menu" width="350" height="351"/>
+        <image name="replay" width="468" height="468"/>
+        <image name="win" width="2133" height="1024"/>
+        <image name="winBg" width="2484" height="4416"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
