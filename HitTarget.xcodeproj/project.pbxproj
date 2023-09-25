@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24595F8D2ABDB592000EAC67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24595F8C2ABDB592000EAC67 /* AppDelegate.swift */; };
-		24595F8F2ABDB592000EAC67 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24595F8E2ABDB592000EAC67 /* GameScene.sks */; };
-		24595F912ABDB592000EAC67 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24595F902ABDB592000EAC67 /* Actions.sks */; };
 		24595F932ABDB592000EAC67 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24595F922ABDB592000EAC67 /* GameScene.swift */; };
 		24595F952ABDB592000EAC67 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24595F942ABDB592000EAC67 /* GameViewController.swift */; };
 		24595F982ABDB592000EAC67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24595F962ABDB592000EAC67 /* Main.storyboard */; };
@@ -21,13 +19,13 @@
 		24595FAC2ABDD3F5000EAC67 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24595FAA2ABDD3F5000EAC67 /* WinViewController.swift */; };
 		24595FAD2ABDD3F5000EAC67 /* WinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24595FAB2ABDD3F5000EAC67 /* WinViewController.xib */; };
 		24595FB12ABDD5D7000EAC67 /* NameImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24595FB02ABDD5D7000EAC67 /* NameImage.swift */; };
+		24D8B5492AC1C9BE00EE64F0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24D8B5482AC1C9BE00EE64F0 /* GameScene.sks */; };
+		24D8B54B2AC1F75100EE64F0 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8B54A2AC1F75100EE64F0 /* NotificationName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24595F892ABDB592000EAC67 /* HitTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24595F8C2ABDB592000EAC67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24595F8E2ABDB592000EAC67 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		24595F902ABDB592000EAC67 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		24595F922ABDB592000EAC67 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		24595F942ABDB592000EAC67 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		24595F972ABDB592000EAC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +37,8 @@
 		24595FAA2ABDD3F5000EAC67 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		24595FAB2ABDD3F5000EAC67 /* WinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinViewController.xib; sourceTree = "<group>"; };
 		24595FB02ABDD5D7000EAC67 /* NameImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameImage.swift; sourceTree = "<group>"; };
+		24D8B5482AC1C9BE00EE64F0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		24D8B54A2AC1F75100EE64F0 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +98,8 @@
 		24595FAE2ABDD5A9000EAC67 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				24595F8E2ABDB592000EAC67 /* GameScene.sks */,
-				24595F902ABDB592000EAC67 /* Actions.sks */,
 				24595F922ABDB592000EAC67 /* GameScene.swift */,
+				24D8B5482AC1C9BE00EE64F0 /* GameScene.sks */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				24595FB02ABDD5D7000EAC67 /* NameImage.swift */,
+				24D8B54A2AC1F75100EE64F0 /* NotificationName.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,10 +173,9 @@
 			files = (
 				24595F982ABDB592000EAC67 /* Main.storyboard in Resources */,
 				24595FA72ABDB691000EAC67 /* MenuViewController.xib in Resources */,
-				24595F8F2ABDB592000EAC67 /* GameScene.sks in Resources */,
 				24595F9A2ABDB594000EAC67 /* Assets.xcassets in Resources */,
 				24595F9D2ABDB594000EAC67 /* LaunchScreen.storyboard in Resources */,
-				24595F912ABDB592000EAC67 /* Actions.sks in Resources */,
+				24D8B5492AC1C9BE00EE64F0 /* GameScene.sks in Resources */,
 				24595FAD2ABDD3F5000EAC67 /* WinViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24595F932ABDB592000EAC67 /* GameScene.swift in Sources */,
+				24D8B54B2AC1F75100EE64F0 /* NotificationName.swift in Sources */,
 				24595F952ABDB592000EAC67 /* GameViewController.swift in Sources */,
 				24595FB12ABDD5D7000EAC67 /* NameImage.swift in Sources */,
 				24595FA92ABDB6C5000EAC67 /* PrivacyPolicyViewController.swift in Sources */,
