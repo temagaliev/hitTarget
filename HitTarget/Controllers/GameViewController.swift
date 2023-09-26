@@ -9,38 +9,63 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
-    
-    static var isWin: Bool = false
+protocol GameViewControllerDelegate {
+    func showWinScreen()
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(winerOrLoserAction), name: NSNotification.Name(rawValue: NotificationName.gameEnd.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(closeAction), name: NSNotification.Name(rawValue: NotificationName.closeGame.rawValue), object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        let skView = SKView(frame: view.frame)
-        view.addSubview(skView)
-        
-        
-        let skScene = SKScene(fileNamed: "GameScene")
-        skScene?.size = CGSize(width: view.frame.width, height: view.frame.height)
-        skScene?.scaleMode = .aspectFill
-        skView.presentScene(skScene)
-    }
-    
-    @objc func winerOrLoserAction() {
+extension GameViewController: GameViewControllerDelegate {
+    func showWinScreen() {
         let vc = WinViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated:  true)
     }
     
-    @objc func closeAction() {
-        dismiss(animated: true)
+    
+}
+
+class GameViewController: UIViewController {
+    
+    static var isWin: Bool = false
+    static var endScore: Int = 0
+
+    
+    let buttonMenu: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: NameImage.menu.rawValue), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let skScene: GameScene = SKScene(fileNamed: "GameScene") as! GameScene
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        buttonMenu.addTarget(self, action: #selector(actionButtonMenu), for: .touchUpInside)
+        
+        let skView = SKView(frame: view.frame)
+        view.addSubview(skView)
+        
+        skScene.size = CGSize(width: view.frame.width, height: view.frame.height)
+        skScene.scaleMode = .aspectFill
+        skScene.gameVCDelegate = self
+        skView.presentScene(skScene)
+            
+        view.addSubview(buttonMenu)
+        buttonMenu.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        buttonMenu.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        buttonMenu.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
+        buttonMenu.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 16).isActive = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        skScene.startGame()
+    }
+    
+    @objc func actionButtonMenu() {
+        dismiss(animated: true)
+    }
+
+
     
 }

@@ -17,5 +17,5 @@ enum NameImage: String {
     case winBg = "winBg"
     case loserBg = "loserBg"
     case loser = "loser"
-    
+    case menu = "menu"
 }

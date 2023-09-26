@@ -10,6 +10,7 @@ import UIKit
 class WinViewController: UIViewController {
 
     @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var imageStatus: UIImageView!
     
     override func viewDidLoad() {
@@ -17,17 +18,15 @@ class WinViewController: UIViewController {
         if GameViewController.isWin == true {
             bgImage.image = UIImage(named: NameImage.winBg.rawValue)
             imageStatus.image = UIImage(named: NameImage.win.rawValue)
+            scoreLabel.text = "Score: " + String(GameViewController.endScore)
         } else {
             bgImage.image = UIImage(named: NameImage.loserBg.rawValue)
             imageStatus.image = UIImage(named: NameImage.loser.rawValue)
+            scoreLabel.text = ""
         }
-    }
-    @IBAction func replayAction(_ sender: Any) {
-        dismiss(animated: true)
-    }
-    
-    @IBAction func menuAction(_ sender: Any) {
-        dismiss(animated: true)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationName.gameEnd.rawValue), object: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.dismiss(animated: true)
+        }
     }
 }
