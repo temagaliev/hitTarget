@@ -26,6 +26,7 @@ class WinViewController: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            GameViewController.endScore = 0
             self?.dismiss(animated: true)
         }
     }

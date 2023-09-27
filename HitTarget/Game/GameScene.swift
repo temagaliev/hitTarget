@@ -295,6 +295,7 @@ extension GameScene: SKSceneDelegate {
 
                     GameViewController.isWin = true
                     isFistLevel = false
+                    multilplierScore = 1
                     let waitForViewXAction = SKAction.wait(forDuration: 1)
 
                     self.run(waitForViewXAction) { [weak self] in
@@ -302,6 +303,7 @@ extension GameScene: SKSceneDelegate {
                     }
                 } else {
                     GameViewController.isWin = false
+                    multilplierScore = 1
                     gameVCDelegate?.showWinScreen()
                 }
                 isStartMoveBall = false
